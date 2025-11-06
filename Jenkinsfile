@@ -14,8 +14,6 @@ pipeline {
         stage('httpd-container') {
             steps {
                 sh '''
-                    sudo docker stop test || true
-                    sudo docker rm  test || true
                     sudo docker run -dp 80:80 --name test httpd
                     sudo docker cp index.html test:/usr/local/apache2/htdocs
                 '''
