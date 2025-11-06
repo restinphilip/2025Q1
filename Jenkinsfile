@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
                     sudo yum install docker -y
-                    sudo systemctl start docker
+                    sudo service docker start
                 '''
             }
         }
