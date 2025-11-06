@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''
                     sudo docker run -dp 80:80 --name test httpd
-                    sudo docker cp index.html test:/usr/local/apache2/htdocs
+                    sudo docker cp index.html test:/usr/local/apache2/htdocs/
                 '''
             }
         }
